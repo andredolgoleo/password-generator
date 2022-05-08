@@ -1,16 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style/styles.css">
-    <title>Password Generator</title>
+    <title>Document</title>
+    <link rel="stylesheet" href="style/index.css">
 </head>
+<aside class="passLenght">Укажите длинну<input min="1" class="input__passLenght" type="number"></aside>
+
 <body>
-    
-
-
-    <script src="js/index.js"></script>
+    <div class="box">
+        <div class="inner">
+            <div class="text">
+                <h2>Random password</h3>
+            </div>
+            <form action="">
+                <div class="wrapper__input">
+                    <input readonly type="text" id="password" placeholder="Create password">
+                </div>
+                <div class="wrapper__button">
+                    <button class="generate" type="button" onclick="genPassword ()">Generate</button>
+                    <button onclick="copyPassword ()" type="button">Copy</button>
+                </div>
+            </form>
+        </div>
+    </div>
+<script src="js/index.js"></script>
 </body>
+
 </html>
