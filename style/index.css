@@ -8,19 +8,19 @@ body {
   font-family: sans-serif;
   margin: 0;
   padding: 0;
-  position: static;
+  position: absolute;
 }
 
 .box {
   display: flex;
   justify-content: center;
   width: 50vw;
-  min-height: 250px;
+  height: 250px;
   background-color: #DC3D24;
   color: #232B2B;
   text-align: center;
   color: white;
-  position: relative;
+  position:relative;
 }
 
 .inner {
@@ -135,14 +135,34 @@ input[type="number"]::-webkit-inner-spin-button {
 
 }
 
-.input__passLenght {
+.passLenght {
+  display: block;
+  position: absolute;
+  width: fit-content;
+  height: 20px;
+  z-index: 1;
+  left: 3%;
+  bottom: 60%;
+}
+
+#input__passLenght {
+  display: block;
+  width: 20px;
+  height: auto;
+}
+
+.passLenght::after {
   display: block;
   width: 20px;
   height: 20px;
   position: absolute;
+  content: "Password Length";
+  z-index: 3;
+  font-weight: 400;
 }
 
 @media (max-device-width: 600px) {
+
   .box {
     display: flex;
     justify-content: center;
@@ -157,6 +177,17 @@ input[type="number"]::-webkit-inner-spin-button {
   .generate {
     text-align: center;
     padding: 0;
+  }
+
+  .passLenght::after {
+    display: block;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    content: "Password Length";
+    z-index: 3;
+    font-weight: 400;
+    font-size: .7rem;
   }
 
 }
