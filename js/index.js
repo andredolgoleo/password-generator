@@ -21,7 +21,7 @@ function genPassword() {
 }
 
 function copyPassword() {
-   var copyText = document.getElementById("password");
+   let copyText = document.getElementById("password");
    copyText.select();
    document.execCommand("copy");
 }
